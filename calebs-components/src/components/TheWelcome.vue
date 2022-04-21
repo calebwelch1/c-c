@@ -1,4 +1,12 @@
-<script setup>
+<script>
+export default {
+  name: 'TheWelcome',
+  methods: {
+    routeComponentView(){
+      this.$router.push('components');
+    },
+  },
+}
 </script>
 
 <template>
@@ -9,7 +17,7 @@ Caleb's Components
 <p class="text-white support-text">
 A free library of reusable components and css knowledge
 </p>
-<button class="start-button">
+<button class="start-button" @click="routeComponentView">
 Get Started
 </button>
 </div>
