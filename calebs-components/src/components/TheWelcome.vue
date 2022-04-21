@@ -1,84 +1,42 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a target="_blank" href="https://vuejs.org/">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite</a>. The recommended IDE
-    setup is <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>. If you need to test
-    your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-    <a href="https://docs.cypress.io/guides/component-testing/introduction" target="_blank"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>,
-    <a target="_blank" href="https://router.vuejs.org/">Vue Router</a>,
-    <a target="_blank" href="https://test-utils.vuejs.org/">Vue Test Utils</a>, and
-    <a target="_blank" href="https://github.com/vuejs/devtools">Vue Dev Tools</a>. If you need more
-    resources, we suggest paying
-    <a target="_blank" href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a target="_blank" href="https://chat.vuejs.org">Vue Land</a>, our official Discord server, or
-    <a target="_blank" href="https://stackoverflow.com/questions/tagged/vue.js">StackOverflow</a>.
-    You should also subscribe to
-    <a target="_blank" href="https://news.vuejs.org">our mailing list</a> and follow the official
-    <a target="_blank" href="https://twitter.com/vuejs">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
-  </WelcomeItem>
+<div class="main">
+<h1 class="text-white title">
+Caleb's Components
+</h1>
+<p class="text-white support-text">
+A free library of reusable components and css knowledge
+</p>
+</div>
 </template>
+
+<style lang="scss">
+
+.title {
+  font-size: 70px;
+  font-weight: 400;
+  position: absolute;
+  top: 25%;
+}
+.support-text {
+  font-size: 25px;
+  font-weight: 200;
+  position: absolute;
+  top: 40%;
+}
+
+.main{
+display: grid;
+grid-template-columns: repeat(12, minmax(0, 1fr));
+height: 100vh;
+width:100vw;
+margin:0;
+justify-items: center;
+background: rgb(33,36,143);
+background: radial-gradient(circle, rgba(33,36,143,1) 0%, rgba(49,140,115,1) 100%);
+position: relative;
+}
+
+</style>

@@ -4,18 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <RouterView />
-  <div class="try">
-  <p class="try_sass">
-  hi
-  </p>
-  </div>
 </template>
 
 <style lang="scss">
 @import './stylesheets/index.css';
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
 
 * {
-  font-family: 'Avenir', 'Arial', 'sans-serif' !important
+  font-family: 'Akshar', 'Avenir', 'Arial', 'sans-serif' !important
 }
 
 body{
@@ -34,6 +30,10 @@ body{
   &_sass{
     color: red;
   }
+}
+
+.text-white {
+  color: white;
 }
 
 </style>
