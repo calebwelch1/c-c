@@ -9,6 +9,9 @@ Caleb's Components
 <p class="text-white support-text">
 A free library of reusable components and css knowledge
 </p>
+<button class="start-button">
+Get Started
+</button>
 </div>
 </template>
 
@@ -17,14 +20,24 @@ A free library of reusable components and css knowledge
 .title {
   font-size: 70px;
   font-weight: 400;
-  position: absolute;
-  top: 25%;
+  margin-top: 25vh;
+  margin-bottom: 2vh;
 }
 .support-text {
   font-size: 25px;
   font-weight: 200;
-  position: absolute;
-  top: 40%;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+
+.start-button {
+  font-size: 25px;
+  font-weight: 200;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
 }
 
 .main{
@@ -36,7 +49,8 @@ margin:0;
 justify-items: center;
 background: rgb(33,36,143);
 background: radial-gradient(circle, rgba(33,36,143,1) 0%, rgba(49,140,115,1) 100%);
-position: relative;
+display: flex;
+flex-direction: column;
 }
 
 </style>
