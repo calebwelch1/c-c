@@ -25,6 +25,9 @@ export default {
     routeContactView(){
       this.$router.push('contact');
     },
+    routeButtonsView(){
+      this.$router.push('buttons');
+    },
     showNavButtons(){
       const navButtons = document.getElementsByClassName("nav-button");
       if (navButtons[0].style.display === "block") {
@@ -58,11 +61,12 @@ export default {
     <img v-if="!showComponents" :src="chevronRight" style="width: 3rem; height: 1.5rem;"/>
     <img v-if="showComponents" :src="chevronDown" style="width: 3rem; height: 1.5rem;"/>
   </button>
+  <!-- _____________________________________________Components Collapse -->
     <transition name="rise">
-    <div v-if="showComponents" class="brand-background" style="width: 100%;">
-      <button class="nav-button-secondary">
-      Buttons
-      </button>
+    <div v-if="showComponents" style="width: 100%;">
+      <div class="collapse-bar" style="width: 100%" @click="routeButtonsView">
+        <button class="nav-button-secondary">Buttons</button>
+      </div>
     </div>
     </transition>
   <button class="nav-button" @click="routeAboutView">About</button>
@@ -113,6 +117,9 @@ body{
   background: radial-gradient(circle, rgba(33,36,143,1) 0%, rgba(49,140,115,1) 100%);
 }
 
+.reverse-brand-background {
+  background: radial-gradient(circle, rgba(237,221,71,1) 0%, rgba(230,81,71,1) 100%);
+}
 // nav
 .sidenav {
   height: 100%;
@@ -153,7 +160,6 @@ body{
   color: #99CCFF;
   cursor: pointer;
 }
-
 .nav-icon{
   display: none;
 }
@@ -166,6 +172,15 @@ body{
   .nav-icon {
     display: block;
   }
+}
+
+.collapse-bar{
+  background: radial-gradient(circle, rgba(33,36,143,1) 0%, rgba(49,140,115,1) 100%);
+}
+.collapse-bar:hover{
+  cursor:pointer;
+  background: radial-gradient(circle, rgba(237,221,71,1) 0%, rgba(230,81,71,1) 100%);
+  transition: all .5s ease;
 }
 // transitions
 .v-enter-active,
