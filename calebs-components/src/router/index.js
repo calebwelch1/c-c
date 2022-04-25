@@ -37,7 +37,13 @@ const router = createRouter({
       path: '/buttons',
       name: 'buttons-view',
       component: () => import('../views/ComponentViews/ButtonsView.vue')
-    }
+    },
+    // how to
+    {
+      path: '/signature',
+      name: 'signature-view',
+      component: () => import('../views/HowToViews/Signature/index.vue')
+    },
   ]
 })
 

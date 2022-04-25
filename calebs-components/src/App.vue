@@ -19,6 +19,9 @@ export default {
     toggleShowComponents(){
       this.showComponents = !this.showComponents;
     },
+    toggleShowHowTo(){
+      this.showHowTo = !this.showHowTo;
+    },
     routeAboutView(){
       this.$router.push('about');
     },
@@ -27,6 +30,9 @@ export default {
     },
     routeButtonsView(){
       this.$router.push('buttons');
+    },
+     routeHowToSignature(){
+      this.$router.push('signature');
     },
     showNavButtons(){
       const navButtons = document.getElementsByClassName("nav-button");
@@ -48,6 +54,7 @@ export default {
       chevronDown,
       chevronRight,
       showComponents: false,
+      showHowTo: false,
     }
   },
 }
@@ -64,15 +71,31 @@ export default {
   <!-- _____________________________________________Components Collapse -->
     <transition name="rise">
     <div v-if="showComponents" style="width: 100%;">
+      <div class="collapse-bar" style="width: 100%" @click="routeComponentView">
+        <p class="nav-text">Main Page</p>
+      </div>
       <div class="collapse-bar" style="width: 100%" @click="routeButtonsView">
-        <button class="nav-button-secondary">Buttons</button>
+        <p class="nav-text">Buttons</p>
+      </div>
+    </div>
+    </transition>
+  <!-- how to collapse -->
+    <button class="nav-button" @click="toggleShowHowTo">
+    How To
+    <img v-if="!showHowTo" :src="chevronRight" style="width: 3rem; height: 1.5rem;"/>
+    <img v-if="showHowTo" :src="chevronDown" style="width: 3rem; height: 1.5rem;"/>
+  </button>
+  <transition name="rise">
+    <div v-if="showHowTo" style="width: 100%;">
+      <div class="collapse-bar" style="width: 100%" @click="routeHowToSignature">
+        <p class="nav-text">Animated Signature</p>
       </div>
     </div>
     </transition>
   <button class="nav-button" @click="routeAboutView">About</button>
   <button class="nav-button" @click="routeContactView">Contact</button>
 </div>
-  <RouterView />
+  <RouterView style="width: 100vw;"/>
 </template>
 
 <style lang="scss">
@@ -93,11 +116,48 @@ body{
   text-align: center;
   color: slate-grey;
   background-color: transparent;
+  overflow: hidden;
+}
+p {
+  margin: 0;
 }
 // sass
-.try {
-  &_sass{
-    color: red;
+@for $i from 1 through 12 {
+    .grid-col-#{$i} {
+      display:grid;
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+  }
+  
+@for $i from 1 through 12 {
+    .col-span-#{$i} {
+        grid-column: span $i / span $i;
+    }
+}
+
+@for $i from 1 through 50 {
+  .gap-#{$i} {
+      gap: $i rem;
+  }
+}
+
+// columns
+@for $i from 1 through 12 {
+    .grid-col-#{$i} {
+      display:grid;
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+  }
+  
+@for $i from 1 through 12 {
+    .col-span-#{$i} {
+        grid-column: span $i / span $i;
+    }
+}
+
+@for $i from 1 through 50 {
+  .gap-#{$i} {
+      gap: $i rem;
   }
 }
 
@@ -153,6 +213,17 @@ body{
   padding-top: 1vh;
   padding-bottom: 0.5vh;
   margin-left: 2vw;
+  display: block;
+}
+
+.nav-text {
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+  margin-left: 0vw;
   display: block;
 }
 
