@@ -36,6 +36,8 @@ export default {
     },
     showNavButtons(){
       const navButtons = document.getElementsByClassName("nav-button");
+      this.showComponents = false;
+      this.showHowTo = false;
       if (navButtons[0].style.display === "block") {
         for (let i = 0; i < navButtons.length; i++) {
           navButtons[i].style.display = "none";
@@ -113,7 +115,6 @@ body{
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: slate-grey;
   background-color: transparent;
   overflow: hidden;
@@ -226,6 +227,7 @@ p {
   padding-bottom: 0.5vh;
   margin-left: 0vw;
   display: block;
+  text-align:center;
 }
 
 .nav-button:hover{
@@ -235,7 +237,22 @@ p {
 .nav-icon{
   display: none;
 }
-@media screen and (max-width: 600px) {
+// medium
+@media screen and (max-width: 1000px) {
+  .nav-button {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+  margin-left: 2vw;
+  display: block;
+  font-weight: 500;
+}
+}
+// small
+@media screen and (max-width: 650px) {
   .sidenav {
     width: 100%;
     height: auto;
