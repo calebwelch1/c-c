@@ -97,7 +97,7 @@ export default {
   <button class="nav-button" @click="routeAboutView">About</button>
   <button class="nav-button" @click="routeContactView">Contact</button>
 </div>
-  <RouterView style="width: 100vw;"/>
+  <RouterView style="width: 100%;"/>
 </template>
 
 <style lang="scss">
@@ -119,6 +119,7 @@ body{
   background-color: transparent;
   overflow: hidden;
 }
+
 p {
   margin: 0;
   font-size: 20px;
@@ -254,8 +255,11 @@ p {
 // small
 @media screen and (max-width: 650px) {
   .sidenav {
-    width: 100%;
+    width: 100vw;
     height: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
   }
 
   .nav-icon {

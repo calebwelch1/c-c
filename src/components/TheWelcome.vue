@@ -30,12 +30,16 @@ Get Started
   font-weight: 400;
   margin-top: 25vh;
   margin-bottom: 2vh;
+  text-align: center;
 }
 .support-text {
   font-size: 25px;
   font-weight: 200;
   margin-top: 5vh;
   margin-bottom: 2vh;
+  text-align: center;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .start-button {
