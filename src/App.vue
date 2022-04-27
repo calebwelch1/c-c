@@ -122,7 +122,14 @@ body{
 
 p {
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 650px) {
+  p {
+    margin: 0;
+    font-size: 20px;
+  }
 }
 // sass
 @for $i from 1 through 12 {

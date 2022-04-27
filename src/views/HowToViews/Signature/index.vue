@@ -11,7 +11,7 @@ import BlogHeader from '../BlogHeader.vue'
       But making one yourself is tedious right?
       WRONG! I'm going to show you how to whip up a personalized animation and host it on your own website.
       </p>
-      <div class="initials h-30 w-30 flex-col" style="zIndex; 5;">
+      <div class="initials" style="margin-top: auto; margin-bottom: auto; background: black;">
         <span class="initialspan"/>
       </div>
       <p style="margin-top: 2vh;">
@@ -26,15 +26,17 @@ import BlogHeader from '../BlogHeader.vue'
 <style>
 .content{
   margin-left: 15vw;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 10vw;
+  padding-right: auto;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 650px) {
   .content{
-    margin-left: 0vw;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5vw;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -42,8 +44,10 @@ import BlogHeader from '../BlogHeader.vue'
   position: absolute;
   display: block;
   background: url('@/assets/animations/initialsgif.gif');
-  width: 35rem;
-  height: 35rem;
+  margin:0;
+  margin-left: -6rem;
+  width: 27rem;
+  height: 20rem;
   background-repeat: no-repeat;
 }
 </style>
