@@ -1,6 +1,7 @@
 <script setup>
 import BlogHeader from '@/components/BlogHeader.vue'
 import CodeSnippet from '@/assets/background/code-snippet.jpg'
+import CodeBox from '@/components/CodeBox.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import CodeSnippet from '@/assets/background/code-snippet.jpg'
       <p>
       Found on many coding forums and websites the CodeBox is a staple for quickly sharing code snippets.
       </p>
+      <CodeBox />
     </div>
   </div>
 </template>
