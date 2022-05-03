@@ -110,6 +110,7 @@ export default {
 
 body{
   margin:0 !important;
+  overflow-x: hidden !important;
 }
 
 #app {
@@ -117,7 +118,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   color: slate-grey;
   background-color: transparent;
-  overflow: hidden;
+  overflow-x: hidden !important;
 }
 
 p {
