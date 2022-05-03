@@ -1,5 +1,5 @@
 <script>
-import candy from './candy.jpg'
+import candy from '@/assets/background/candy.jpg'
 
 export default {
 name: 'BlogHeader',

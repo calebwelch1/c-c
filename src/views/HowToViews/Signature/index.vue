@@ -1,5 +1,5 @@
 <script setup>
-import BlogHeader from '../BlogHeader.vue'
+import BlogHeader from '@/components/BlogHeader.vue'
 </script>
 
 <template>

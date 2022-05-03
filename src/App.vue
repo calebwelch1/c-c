@@ -22,6 +22,7 @@ export default {
     toggleShowHowTo(){
       this.showHowTo = !this.showHowTo;
     },
+    // routes
     routeAboutView(){
       this.$router.push('about');
     },
@@ -33,6 +34,9 @@ export default {
     },
      routeHowToSignature(){
       this.$router.push('signature');
+    },
+    routeCodeBox(){
+      this.$router.push('code-box');
     },
     showNavButtons(){
       const navButtons = document.getElementsByClassName("nav-button");
@@ -78,6 +82,9 @@ export default {
       </div>
       <div class="collapse-bar" style="width: 100%" @click="routeButtonsView">
         <p class="nav-text">Buttons</p>
+      </div>
+      <div class="collapse-bar" style="width: 100%" @click="routeCodeBox">
+        <p class="nav-text">Code-Box</p>
       </div>
     </div>
     </transition>

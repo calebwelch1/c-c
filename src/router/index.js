@@ -38,6 +38,11 @@ const router = createRouter({
       name: 'buttons-view',
       component: () => import('../views/ComponentViews/ButtonsView.vue')
     },
+    {
+      path: '/code-box',
+      name: 'code-box',
+      component: () => import('../views/ComponentViews/CodeBox/index.vue')
+    },
     // how to
     {
       path: '/signature',
