@@ -24,7 +24,10 @@ props: {
           ]
         },
     },
-methods: {
+  mounted() {
+    document.getElementById(`${this.tabsArr[0].title}-button`).click();
+  },
+  methods: {
     openTab(evt, tabName) {
         let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -36,7 +39,7 @@ methods: {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
         document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.getElementById(`${tabName}-button`).className += " active";
         }
     }
 }
@@ -45,7 +48,7 @@ methods: {
 <template>
 <div id="code-box">
   <div class="tab">
-    <button v-for="tab in tabsArr" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
+    <button v-for="tab in tabsArr" :id="`${tab.title}-button`" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
   </div>
   <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
     <p>
@@ -61,11 +64,11 @@ methods: {
 }
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
+  border-radius: 20px 20px 0px 0px;
   background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
@@ -77,21 +80,26 @@ methods: {
   font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
+  background-color: #162126;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
+  border-radius: 0px 0px 20px 20px;
   border-top: none;
+}
+
+.tabcontent p {
+  color: #fff;
+  margin: 2rem;
+  font-size: 20px;
 }
 </style>
