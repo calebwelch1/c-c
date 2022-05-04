@@ -27,6 +27,11 @@ props: {
   mounted() {
     document.getElementById(`${this.tabsArr[0].title}-button`).click();
   },
+    data() {
+    return {
+      currentTab: '',
+    }
+  },
   methods: {
     openTab(evt, tabName) {
         let i, tabcontent, tablinks;
@@ -40,7 +45,12 @@ props: {
         }
         document.getElementById(tabName).style.display = "block";
         document.getElementById(`${tabName}-button`).className += " active";
-        }
+        this.currentTab = tabName;
+        },
+    copyText() {
+        let text = document.getElementById(`${this.currentTab}-content`);
+        navigator.clipboard.writeText(text.innerHTML);
+      },
     }
 }
 </script>
@@ -49,9 +59,10 @@ props: {
 <div id="code-box">
   <div class="tab">
     <button v-for="tab in tabsArr" :id="`${tab.title}-button`" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
+    <button id="copy-button" @click="copyText" >copy!</button>
   </div>
   <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
-    <p>
+    <p :id="`${tab.title}-content`">
     {{tab.content}}
     </p>
   </div>
@@ -64,9 +75,15 @@ props: {
 }
 .tab {
   overflow: hidden;
+  position: relative;
   border: 1px solid #fff;
   border-radius: 20px 20px 0px 0px;
   background-color: #f1f1f1;
+}
+
+#copy-button {
+  position:absolute;
+  right: 0rem;
 }
 
 .tab button {
