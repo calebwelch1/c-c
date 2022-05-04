@@ -4,21 +4,28 @@ import candy from '@/assets/background/candy.jpg'
 export default {
 name: 'CodeBox',
 props: {
-    content: {
-        type: Object,
+    tabsArr: {
+        type: Array,
         required: true,
-        default(rawProps) {
-            return {
-                    {
-                    title: 'London',
-                    content: 'London content',
-                    },
-                }
-            }
+        default: [
+          {
+            title: 'London',
+            content: 'The Capital of England',
+          },
+          {
+            title: 'Tokyo',
+            content: 'The Capital of Japan',
+          },
+          {
+            title: 'Madrid',
+            content: 'The Capital of Spain',
+          
+          }
+          ]
         },
     },
 methods: {
-    openCity(evt, cityName) {
+    openTab(evt, tabName) {
         let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -28,7 +35,7 @@ methods: {
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
         }
     }
@@ -36,28 +43,22 @@ methods: {
 </script>
 
 <template>
-<div>
-<div class="tab">
-  <button class="tablinks" @click="openCity(event, 'London')">London</button>
-  <button class="tablinks" @click="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" @click="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
-
-<div id="London" class="tabcontent">
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
+<div id="code-box">
+  <div class="tab">
+    <button v-for="tab in tabsArr" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
   </div>
+  <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
+    <p>
+    {{tab.content}}
+    </p>
+  </div>
+</div>
 </template>
 <style lang="scss">
+#code-box {
+  margin: 15px;
+  width: auto;
+}
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;

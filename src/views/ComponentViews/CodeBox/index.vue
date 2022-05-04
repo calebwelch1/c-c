@@ -12,13 +12,13 @@ import CodeBox from '@/components/CodeBox.vue'
       <p>
       Found on many coding forums and websites the CodeBox is a staple for quickly sharing code snippets.
       </p>
-      <CodeBox />
+      <CodeBox style="margin-right: 10rem;"/>
     </div>
   </div>
 </template>
 
 <style>
-.content{
+.content {
   margin-left: 15vw;
   padding-left: 6vw;
   padding-right: auto;
