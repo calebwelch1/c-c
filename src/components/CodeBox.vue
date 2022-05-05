@@ -1,5 +1,5 @@
 <script>
-import candy from '@/assets/background/candy.jpg'
+import copyIcon from '@/assets/icons/copy_icon.svg'
 
 export default {
 name: 'CodeBox',
@@ -30,6 +30,7 @@ props: {
     data() {
     return {
       currentTab: '',
+      copyIcon,
     }
   },
   methods: {
@@ -59,7 +60,7 @@ props: {
 <div id="code-box">
   <div class="tab">
     <button v-for="tab in tabsArr" :id="`${tab.title}-button`" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
-    <button id="copy-button" @click="copyText" >copy!</button>
+    <button id="copy-button" @click="copyText" ><img :src="copyIcon" class="copy-icon"/></button>
   </div>
   <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
     <p :id="`${tab.title}-content`">
@@ -94,7 +95,8 @@ props: {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .tab button:hover {
@@ -118,5 +120,10 @@ props: {
   color: #fff;
   margin: 2rem;
   font-size: 20px;
+  font-family: 'Consolas', 'Monaco', 'Courier-New', 'Lucida-Console' !important;
+}
+
+.copy-icon {
+  height: 1.8rem;
 }
 </style>
