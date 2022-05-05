@@ -8,11 +8,29 @@ import CodeBox from '@/components/CodeBox.vue'
   <div class="container hide-scroll">
     <BlogHeader title="Code Box" description="HTML/CSS/JS for the CodeBox component" :img="CodeSnippet"/>
     <div class="content">
-      <h2> Starting Out </h2>
+      <h2> Code Snippet Box </h2>
       <p>
       Found on many coding forums and websites the CodeBox is a staple for quickly sharing code snippets.
       </p>
-      <CodeBox style="margin-right: 10rem;"/>
+      <!-- <CodeBox style="margin-right: 2rem;"/> -->
+      <p>
+      Really It's just a basic tab box, with some increased utility by adding a copy button.
+      </p>
+      <h2> HTML </h2>
+      <p>
+      We'll start with the HTML
+      </p>
+      <CodeBox style="margin-right: 2rem;"
+      :tabsArr="[
+        {
+          title:'HTML',
+          content:`
+          <div id=&quot;code-box&quot;>
+          fill the rest of it in here q.q
+          </div>
+          `,
+        },
+      ]"/>
     </div>
   </div>
 </template>
@@ -21,6 +39,7 @@ import CodeBox from '@/components/CodeBox.vue'
 .content {
   margin-left: 15vw;
   padding-left: 6vw;
+  margin-bottom: 5vh;
   padding-right: auto;
   overflow: hidden;
 }

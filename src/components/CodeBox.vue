@@ -9,17 +9,27 @@ props: {
         required: true,
         default: [
           {
-            title: 'London',
-            content: 'The Capital of England',
+            title: 'HTML',
+            content: `
+            <div>
+            some html...
+            </div>`,
           },
           {
-            title: 'Tokyo',
-            content: 'The Capital of Japan',
+            title: 'CSS',
+            content: `
+              .some-css {
+              content: "coding is fun"
+              }
+              `,
           },
           {
-            title: 'Madrid',
-            content: 'The Capital of Spain',
-          
+            title: 'JS',
+            content: `
+              while (coding === true) {
+              return "this is awesome"
+              }
+              `,
           }
           ]
         },
@@ -63,7 +73,7 @@ props: {
     <button id="copy-button" @click="copyText" ><img :src="copyIcon" class="copy-icon"/></button>
   </div>
   <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
-    <p :id="`${tab.title}-content`">
+    <p :id="`${tab.title}-content`" style="white-space:pre-wrap;">
     {{tab.content}}
     </p>
   </div>
@@ -110,7 +120,7 @@ props: {
 .tabcontent {
   display: none;
   background-color: #162126;
-  padding: 6px 12px;
+  padding: 1px;
   border: 1px solid #fff;
   border-radius: 0px 0px 20px 20px;
   border-top: none;
@@ -118,9 +128,12 @@ props: {
 
 .tabcontent p {
   color: #fff;
-  margin: 2rem;
+  margin: 2rem 0rem 2rem 1rem;
   font-size: 20px;
   font-family: 'Consolas', 'Monaco', 'Courier-New', 'Lucida-Console' !important;
+  width: auto;
+  max-width: 30vw;
+  padding: 10px;
 }
 
 .copy-icon {
