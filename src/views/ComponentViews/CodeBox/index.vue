@@ -30,6 +30,10 @@ import CodeBox from '@/components/CodeBox.vue'
           </div>
           `,
         },
+        {
+          title: 'try',
+          content: 'hey',
+        }
       ]"/>
     </div>
   </div>

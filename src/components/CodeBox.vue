@@ -33,9 +33,19 @@ props: {
           }
           ]
         },
+    uid:{
+      type: String,
+      required: false,
+      default: '0'
+    },
+    width:{
+      type: String,
+      required: false,
+      default: '50vw',
+    }
     },
   mounted() {
-    document.getElementById(`${this.tabsArr[0].title}-button`).click();
+    document.getElementById(`${this.tabsArr[0].title}-button-${this.uid}`).click();
   },
     data() {
     return {
@@ -55,7 +65,7 @@ props: {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
         document.getElementById(tabName).style.display = "block";
-        document.getElementById(`${tabName}-button`).className += " active";
+        document.getElementById(`${tabName}-button-${this.uid}`).className += " active";
         this.currentTab = tabName;
         },
     copyText() {
@@ -67,15 +77,15 @@ props: {
 </script>
 
 <template>
-<div id="code-box">
-  <div class="tab">
-    <button v-for="tab in tabsArr" :id="`${tab.title}-button`" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
+<div id="code-box" :style="`width:${width};`">
+  <div class="tab" :style="`width:${width};`">
+    <button v-for="tab in tabsArr" :id="`${tab.title}-button-${this.uid}`" class="tablinks" @click="openTab(event, `${tab.title}`)">{{tab.title}}</button>
     <button id="copy-button" @click="copyText" ><img :src="copyIcon" class="copy-icon"/></button>
   </div>
-  <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent">
-    <p :id="`${tab.title}-content`" style="white-space:pre-wrap;">
+  <div v-for="tab in tabsArr" :id="`${tab.title}`" class="tabcontent" :style="`width:${width};`">
+    <textarea :id="`${tab.title}-content`" style="white-space:pre-wrap; width: inherit;">
     {{tab.content}}
-    </p>
+    </textarea>
   </div>
 </div>
 </template>
@@ -138,5 +148,18 @@ props: {
 
 .copy-icon {
   height: 1.8rem;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #162126;
+  color: white;
+  font-size: 16px;
+  resize: none;
 }
 </style>
