@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import BlogHeader from '@/components/BlogHeader.vue'
 </script>
 
 <template>
-  <main>
-    Buttons
-  </main>
+  <div class="container hide-scroll">
+  <BlogHeader />
+  </div>
 </template>

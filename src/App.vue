@@ -179,6 +179,27 @@ p {
   }
 }
 
+.content {
+  margin-left: 15vw;
+  padding-left: 6vw;
+  margin-bottom: 5vh;
+  padding-right: auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .content{
+    padding-left: 5vw;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hide-scroll{
+  overflow-x: hidden !important;
+}
+
 .text-white {
   color: white;
 }

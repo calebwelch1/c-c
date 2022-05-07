@@ -155,7 +155,7 @@ textarea {
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 2px solid transparent;
   border-radius: 4px;
   background-color: #162126;
   color: white;
