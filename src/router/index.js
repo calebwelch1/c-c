@@ -36,7 +36,7 @@ const router = createRouter({
     {
       path: '/buttons',
       name: 'buttons-view',
-      component: () => import('../views/ComponentViews/ButtonsView.vue')
+      component: () => import('../views/ComponentViews/Buttons/index.vue')
     },
     {
       path: '/code-box',

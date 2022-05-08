@@ -12,7 +12,7 @@ export default {
 <template>
 <div class="main">
 <h1 class="text-white title">
-Caleb's Components
+Caleb CSS
 </h1>
 <p class="text-white support-text">
 A free library of reusable components and css knowledge

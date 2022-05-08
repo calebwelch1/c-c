@@ -1,4 +1,4 @@
-# calebs-components
+# caleb-css
 
 A library of reusable Vue components.
 
