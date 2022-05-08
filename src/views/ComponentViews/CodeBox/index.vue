@@ -16,25 +16,39 @@ import CodeBox from '@/components/CodeBox.vue'
       <p>
       Really It's just a basic tab box, with some increased utility by adding a copy button.
       </p>
-      <h2> HTML </h2>
-      <p>
-      We'll start with the HTML
-      </p>
       <CodeBox style="margin-right: 2rem;"
       :tabsArr="[
         {
           title:'HTML',
           content:`
           <div id=&quot;code-box&quot;>
-          fill the rest of it in here q.q
+          The most fun Div
           </div>
           `,
         },
         {
-          title: 'try',
-          content: 'hey',
+          title: 'CSS',
+          content: `
+          #code-box{
+            color: white;
+              margin: 15px;
+              width: auto;
+          }
+          `,
+        },
+        {
+          title: 'JS',
+          content: `
+          while &#40;coding &#61;&#61;&#61; true&#41; {
+              return &quot;this is awesome&quot;
+              }
+          `,
         }
       ]"/>
+      <h2> HTML </h2>
+      <p>
+      We'll start with the HTML
+      </p>
     </div>
   </div>
 </template>
