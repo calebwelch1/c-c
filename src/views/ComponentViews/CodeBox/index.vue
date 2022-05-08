@@ -46,9 +46,19 @@ import CodeBox from '@/components/CodeBox.vue'
         }
       ]"/>
       <h2> HTML </h2>
-      <p>
-      We'll start with the HTML
-      </p>
+      <div class="flex-col">
+        <img src="./code-box-html.jpg" />
+      </div>
+      <h2> CSS </h2>
+      <div class="flex-col">
+      <img src="./code-box-css-1.jpg" style="transform: scale(0.6); margin-top: 0rem; margin-bottom: 0rem;"/>
+      <img src="./code-box-css-2.jpg" style="transform: scale(0.6); margin-top: 0rem; margin-bottom: 0rem;"/>
+      </div>
+      <h2> JS </h2>
+      <div class="flex-col">
+      <img src="./code-box-js-1.jpg" style="transform: scale(0.6); margin-top: 0rem; margin-bottom: 0rem;"/>
+      <img src="./code-box-js-2.jpg" style="transform: scale(0.6); margin-top: 0rem; margin-bottom: 0rem;"/>
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +72,12 @@ import CodeBox from '@/components/CodeBox.vue'
   overflow: hidden;
 }
 
+.code-img {
+  transform:scale(0.8);
+  margin-left:-8vw;
+  display: block;
+}
+
 @media screen and (max-width: 650px) {
   .content{
     padding-left: 5vw;
@@ -69,6 +85,11 @@ import CodeBox from '@/components/CodeBox.vue'
     margin-left: auto;
     margin-right: auto;
   }
+
+  .code-img {
+  transform:scale(0.3);
+  margin-left:-30rem;
+}
 }
 
 .initials .initialspan {
