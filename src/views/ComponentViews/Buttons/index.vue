@@ -4,7 +4,7 @@ import BlogHeader from '@/components/BlogHeader.vue'
 
 <template>
   <div class="container hide-scroll">
-  <BlogHeader />
+  <BlogHeader title="Buttons" description="Buttons for all of your clicking needs"/>
   <div class="content">
   Buttons
   </div>

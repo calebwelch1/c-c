@@ -1,6 +1,13 @@
 <script>
 export default {
   name: 'TheWelcome',
+  props: {
+    includeButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+  },
   methods: {
     routeComponentView(){
       this.$router.push('components');
@@ -17,7 +24,7 @@ Caleb CSS
 <p class="text-white support-text">
 A free library of reusable components and css knowledge
 </p>
-<button class="start-button" @click="routeComponentView">
+<button v-if="includeButton" class="start-button" @click="routeComponentView">
 Get Started
 </button>
 </div>
