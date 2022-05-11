@@ -1,1 +1,0 @@
-import{B as e}from"./BlogHeader.2ef40c4d.js";import{o as t,c as o,a as s,b as a}from"./index.f59e1dc2.js";const c={class:"container hide-scroll"},r=a("div",{class:"content"}," Buttons ",-1),p={setup(_){return(n,d)=>(t(),o("div",c,[s(e),r]))}};export{p as default};
