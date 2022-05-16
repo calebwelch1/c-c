@@ -7,13 +7,13 @@ import BlogHeader from '@/components/BlogHeader.vue'
   <BlogHeader title="Buttons" description="Buttons for all of your clicking needs"/>
   <div class="content">
     <div class="flex-row" style="margin-top: 3rem; margin-bottom: 3rem;">
-      <button class="orange-box-button">
+      <button class="orange box-button">
         Button
       </button>
-      <button class="orange-box-button pill" style="margin-left: 20px;">
+      <button class="orange box-button pill" style="margin-left: 20px;">
         Button
       </button>
-      <button class="orange-box-button rounded-edge" style="margin-left: 20px;">
+      <button class="orange box-button rounded-edge" style="margin-left: 20px;">
         Button
       </button>
     </div>
@@ -29,10 +29,9 @@ import BlogHeader from '@/components/BlogHeader.vue'
   overflow: hidden;
 }
 
-.orange-box-button {
+.box-button {
   border: 0 solid;
   color: white;
-  background-color:#DA4232;
   width: 5.5rem;
   height: 2.2rem;
   font-size: 18px;
@@ -41,14 +40,21 @@ import BlogHeader from '@/components/BlogHeader.vue'
   box-shadow: 0px 5px 20px 1px #D0D0D0;
 }
 
-.orange-box-button:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 20px 1px #A9A9A9;
+.orange {
+  background-color:#DA4232;
+}
+
+.orange:hover {
   background-color:#EA4C3B;
 }
 
-.orange-box-button:focus {
+.orange:focus {
   background-color: #C43425;
+}
+
+.box-button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 1px #A9A9A9;
 }
 
 .pill {

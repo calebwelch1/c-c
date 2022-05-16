@@ -1,10 +1,11 @@
 <script setup>
 import BlogHeader from '@/components/BlogHeader.vue'
+import ipad from './kelly-sikkema-unsplash.jpg'
 </script>
 
 <template>
   <div class="container hide-scroll">
-    <BlogHeader title="ANIMATED SIGNATURE" description="A custom animated signature, also covers how to use anime js for other custom animation needs"/>
+    <BlogHeader title="ANIMATED SIGNATURE" description="A custom animated signature, also covers how to use anime js for other custom animation needs" :img="ipad"/>
     <div class="content">
       <p class="text-left" style="margin-left: auto; margin-top: 2vh;">
       Adding a personalized animated signature can add a custom flair to a personal website or social media profile.<br>

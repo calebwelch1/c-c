@@ -49,6 +49,11 @@ const router = createRouter({
       name: 'signature-view',
       component: () => import('../views/HowToViews/Signature/index.vue')
     },
+    {
+      path: '/atomic-css',
+      name: 'atomic-css-view',
+      component: () => import('../views/HowToViews/AtomicCss/index.vue')
+    },
   ]
 })
 

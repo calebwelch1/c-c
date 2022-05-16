@@ -38,6 +38,9 @@ export default {
     routeCodeBox(){
       this.$router.push('code-box');
     },
+    routeAtomicCss(){
+      this.$router.push('atomic-css');
+    },
     showNavButtons(){
       const navButtons = document.getElementsByClassName("nav-button");
       this.showComponents = false;
@@ -98,6 +101,9 @@ export default {
     <div v-if="showHowTo" style="width: 100%;">
       <div class="collapse-bar" style="width: 100%" @click="routeHowToSignature">
         <p class="nav-text">Animated Signature</p>
+      </div>
+      <div class="collapse-bar" style="width: 100%" @click="routeAtomicCss">
+        <p class="nav-text">Make Your Own Atomic CSS like Tailwind</p>
       </div>
     </div>
     </transition>
