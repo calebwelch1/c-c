@@ -184,6 +184,20 @@ p {
       gap: $i rem;
   }
 }
+//color
+$colors: (
+  primary: rgba(33, 36, 143, 1),
+  secondary: rgb(24, 121, 93),
+  tertiary:rgb(174, 156, 21),
+  support: rgb(198, 49, 74),
+);
+
+@each $name,
+$color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
 
 .content {
   margin-left: 15vw;

@@ -42,6 +42,9 @@ import rocket from './nasa-unsplash.jpg'
       </p>
       <h2> Grid </h2>
       <p class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
+      For reference be sure to read up a little on SCSS using the <a target="_blank" href="https://sass-lang.com/documentation/syntax">SCSS docs</a>
+      </p>
+      <p class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
       As an introduction let's make our own custom grid css. Using the grid model is useful for aligning elements on a page, but it can be tedious to type out every single <br>
       modifier. With SCSS we can use for loops to compile a series of classes. SCSS for loops act like normal for loops in javascript. We give the function a <br>
       beginning and end point and specify a task for the function to complete in each loop. We instantiate a variable with the $ icon. So here $i indicates that $i will stand <br>
@@ -66,6 +69,42 @@ import rocket from './nasa-unsplash.jpg'
         </div>
         <div class="col-span-3" style="background-color: blue; color: white;">
           class=col-span-3
+        </div>
+      </div>
+      <h2 class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
+      Colors
+      </h2>
+      <p class="text-left" style="margin-left: auto; margin-top: 3vh; margin-bottom: 2vh;">
+      Similarly we can define a set of colors as a color palette and then use them throughout our project as a defined set of classes. Imagine a company has hired us <br>
+      to update their company ui and they want their brand colors to be used throughout. These colors can be very specific, and typing out a set of classes for each color <br>
+      in the palette would take us a long time. By setting a few colors as variables in the beginning of the project, we can re-use them anywhere else we use color.
+      </p>
+      <p class="text-left" style="margin-left: auto; margin-top: 3vh; margin-bottom: 2vh;">
+      Here we set an array of colors as defined by $colors(...colors). The @each symbol denotes an each loop, $name <br> stands in for the name of the color, and $color stands in for
+      the color value. Here I've created a series of <br> classes that will assign the background color of an html element to the colors we've defined in the $colors array.<br>
+      This could easily be used to create a series of classes that set text-colors and so on.
+      </p>
+      <div class="flex-col">
+        <img src="./scss_colors.jpg" style="height: 35rem; width: 40rem; margin-top: 3rem;"/>
+      </div>
+      <p class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
+      Example
+      </p>
+      <div class="grid-col-12" style="width: 30vw; height: 20rem; background-color: black; margin-top: 3rem;">
+        <div class="col-span-12" style="background-color: black; color: white; height: 2px;">
+        parent div class="grid-col-12"
+        </div>
+        <div class="col-span-3 bg-primary" style="color: white;">
+          class=col-span-3 bg-primary
+        </div>
+        <div class="col-span-3 bg-secondary" style="color: black;">
+          class=col-span-3 bg-secondary
+        </div>
+        <div class="col-span-3 bg-tertiary" style="color: white;">
+          class=col-span-3 bg-tertiary
+        </div>
+        <div class="col-span-3 bg-support" style="color: white;">
+          class=col-span-3 bg-support
         </div>
       </div>
     </div>
