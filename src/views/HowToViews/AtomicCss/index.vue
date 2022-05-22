@@ -40,9 +40,33 @@ import rocket from './nasa-unsplash.jpg'
       customize the provided styling I've found it easier to make my own Atomic CSS framework with SASS. All of the utility of Atomic CSS but tailored to my personal <br>
       development style or to the project I'm making. What could be better?
       </p>
-      <h2> Starting Out </h2>
+      <h2> Grid </h2>
+      <p class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
+      As an introduction let's make our own custom grid css. Using the grid model is useful for aligning elements on a page, but it can be tedious to type out every single <br>
+      modifier. With SCSS we can use for loops to compile a series of classes. SCSS for loops act like normal for loops in javascript. We give the function a <br>
+      beginning and end point and specify a task for the function to complete in each loop. We instantiate a variable with the $ icon. So here $i indicates that $i will stand <br>
+      in for the number our for loop is on. Inside the brackets we define the .grid-col-? class, with #{} being how we instantiate an SCSS template literal. This will <br>
+      compile .grid-col-1 with a grid-template-column of 1, .grid-col-2 with a grid-template-column of 2 and so on.
+      </p>
       <div class="flex-col">
         <img src="./sass-grid.jpg" style="height: 35rem; width: 40rem;"/>
+      </div>
+      <p class="text-left" style="margin-left: auto; margin-top: 2vh; margin-bottom: 3vh;">
+      Example
+      </p>
+      <div class="grid-col-12" style="width: 30vw; height: 20rem; background-color: black; margin-top: 3rem;">
+        <div class="col-span-12" style="background-color: black; color: white; height: 2px;">
+        parent div class="grid-col-12"
+        </div>
+        <div class="col-span-3" style="background-color: blue; color: white;">
+          class=col-span-3
+        </div>
+        <div class="col-span-6" style="background-color: yellow; color: black;">
+          class=col-span-6
+        </div>
+        <div class="col-span-3" style="background-color: blue; color: white;">
+          class=col-span-3
+        </div>
       </div>
     </div>
   </div>
