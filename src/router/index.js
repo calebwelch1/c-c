@@ -43,6 +43,11 @@ const router = createRouter({
       name: 'code-box',
       component: () => import('../views/ComponentViews/CodeBox/index.vue')
     },
+    {
+      path: '/carousel',
+      name: 'carousel',
+      component: () => import('../views/ComponentViews/Carousel/index.vue')
+    },
     // how to
     {
       path: '/signature',

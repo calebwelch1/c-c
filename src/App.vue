@@ -38,6 +38,9 @@ export default {
     routeCodeBox(){
       this.$router.push('code-box');
     },
+    routeCarousel(){
+      this.$router.push('carousel');
+    },
     routeAtomicCss(){
       this.$router.push('atomic-css');
     },
@@ -85,6 +88,9 @@ export default {
       </div>
       <div class="collapse-bar" style="width: 100%" @click="routeButtonsView">
         <p class="nav-text">Buttons</p>
+      </div>
+       <div class="collapse-bar" style="width: 100%" @click="routeCarousel">
+        <p class="nav-text">Carousel</p>
       </div>
       <div class="collapse-bar" style="width: 100%" @click="routeCodeBox">
         <p class="nav-text">Code-Box</p>
