@@ -41,6 +41,9 @@ export default {
     routeCarousel(){
       this.$router.push('carousel');
     },
+    routeDropdown(){
+      this.$router.push('dropdown');
+    },
     routeAtomicCss(){
       this.$router.push('atomic-css');
     },
@@ -94,6 +97,9 @@ export default {
       </div>
       <div class="collapse-bar" style="width: 100%" @click="routeCodeBox">
         <p class="nav-text">Code-Box</p>
+      </div>
+      <div class="collapse-bar" style="width: 100%" @click="routeDropdown">
+        <p class="nav-text">Dropdown</p>
       </div>
     </div>
     </transition>

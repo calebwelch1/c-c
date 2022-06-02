@@ -48,6 +48,11 @@ const router = createRouter({
       name: 'carousel',
       component: () => import('../views/ComponentViews/Carousel/index.vue')
     },
+    {
+      path: '/dropdown',
+      name: 'dropdown',
+      component: () => import('../views/ComponentViews/Dropdown/index.vue')
+    },
     // how to
     {
       path: '/signature',
